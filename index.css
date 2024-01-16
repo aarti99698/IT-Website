@@ -1,0 +1,221 @@
+.ssservices {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 40px;
+}
+
+.ssservices h1 {
+    font-size: 40px;
+    color: black;
+    font-weight: 600;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.service2-col {
+    flex-basis: 31%;
+    background: rgb(217, 217, 217);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.service2-col h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.service2-col p {
+    margin: 25px;
+    margin-bottom: 15px;
+}
+
+.service2-col:hover {
+    background-color: rgb(15, 156, 156);
+    color: white;
+}
+
+.clients {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    /* margin-bottom: 40px; */
+}
+
+.clients h1{
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+:root {
+    --marquee-width: 100vw;
+    --marquee-height: 20vh;
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+  }
+  
+  .marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    /* background-color: #111; */
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .marquee:before, .marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+
+  .marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #beb4b4 0%, transparent 100%);
+  }
+  .marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #beb4b4 0%, transparent 100%);
+  }
+
+  .marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+  }
+
+  .marquee-content li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--marquee-element-width);
+    flex-shrink: 0;
+
+  }
+
+  .marquee ul li img{
+    padding-left: 20px;
+  }
+
+  .marquee-content:hover {
+    animation-play-state: paused;
+    /* box-shadow: 10px 10px 20px 10px rgba(182, 10, 10, 0.2); */
+  }
+
+  .marquee-content li:hover {
+    background: rgb(217, 217, 217);
+  }
+
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+  }
+
+  @media  only screen and (min-width:360px) and (max-width: 767px) {
+    /* html { font-size: 12px; } */
+    :root {
+      --marquee-width: 100vw;
+      --marquee-height: 12vh;
+      --marquee-elements-displayed: 3;
+    }
+    .marquee:before, .marquee:after { width: 5rem; }
+    .marquee ul li img{
+      height: 72%!important;
+      width: 100%!important;
+      padding-left: 10px;
+    }
+    
+    .marquee-content li img:hover {
+      padding-left:10px;
+      background:rgb(217, 217, 217);
+    }
+
+    .marquee-content li:hover{
+      width: 40%;
+    }
+    #p{
+      height: 110%!important;
+    }
+  }
+
+/* Services */
+
+.services2 {
+    margin-top: 50px;
+    background: rgb(1, 1, 1);
+}
+
+.container3 {
+    width: 100%;
+    padding-right: 35px;
+    padding-left: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.container3 h2 {
+    color: rgba(32, 57, 110, 2);
+    padding-top: 15px;
+}
+
+.row5 {
+    margin-top: 3%;
+    display: flex;
+}
+
+.services-image {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+    opacity: 0.5;
+}
+
+.services-details h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    opacity: 1;
+    transition: 0.5s;
+    position: absolute;
+    top: 80%;
+    width: 70%;
+    letter-spacing: 0px;
+
+}
+
+.services-block {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+}
+
+.services-block:hover {
+    background-color: red;
+}
+
+.services-block:hover .services-title {
+    top: 50%;
+}
+
+.services-block:hover h4 {
+    color: rgba(253, 223, 0, 1);
+
+}
